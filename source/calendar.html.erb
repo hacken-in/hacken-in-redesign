@@ -13,47 +13,51 @@ title: hacken.in/koeln
     <section>
       <h3><%= day %></h3>
 
-
-      <%
-        entries = [
-          {
-            coordinates: OpenStruct.new(
-              latitude: "50.9504",
-              longitude: "6.9108"
-            ),
-            title: "Rust Cologne/Bonn",
-            subtitle: "Web Development with Rust",
-            location: "Chaos Computer Club Cologne e.V., Heliosstr. 6a, Köln",
-            occurrence: Time.parse("2017-02-27 20:00"),
-            color: "e03131"
-          },
-          {
-            coordinates: OpenStruct.new(
-              latitude: "50.9252",
-              longitude: "6.9908"
-            ),
-            title: "Treffpunkt Semicolon",
-            subtitle: "Vom Sensor bis zum Rechenzentrum mit C# - Ein Praxisbericht",
-            location: "GFU Cyrus AG , Am Grauen Stein 27, Köln",
-            occurrence: Time.parse("2017-02-27 18:00"),
-            color: "6741d9"
-          },
-          {
-            coordinates: OpenStruct.new(
-              latitude: "50.6835",
-              longitude: "7.1543"
-            ),
-            title: "Bonner Microservices Meetup",
-            subtitle: "#7 Apache Kafka & Event Sourcing",
-            location: "predic8 Penthouse, Koblenzer Str. 65, Bonn",
-            occurrence: Time.parse("2017-02-27 20:00"),
-            color: "e03131"
-          }
-        ]
-      %>
-      <% entries.each do |entry| %>
-        <%= partial "calendar-entry", locals: entry %>
-      <% end %>
+      <calendar-entries>
+        <%
+          entries = [
+            {
+              coordinates: OpenStruct.new(
+                latitude: "50.9504",
+                longitude: "6.9108"
+              ),
+              category: "programming",
+              title: "Rust Cologne/Bonn",
+              subtitle: "Web Development with Rust",
+              location: "Chaos Computer Club Cologne e.V., Heliosstr. 6a, Köln",
+              occurrence: Time.parse("2017-02-27 20:00"),
+              color: "e03131"
+            },
+            {
+              coordinates: OpenStruct.new(
+                latitude: "50.9252",
+                longitude: "6.9908"
+              ),
+              category: "socialising",
+              title: "Treffpunkt Semicolon",
+              subtitle: "Vom Sensor bis zum Rechenzentrum mit C# - Ein Praxisbericht",
+              location: "GFU Cyrus AG , Am Grauen Stein 27, Köln",
+              occurrence: Time.parse("2017-02-27 18:00"),
+              color: "6741d9"
+            },
+            {
+              coordinates: OpenStruct.new(
+                latitude: "50.6835",
+                longitude: "7.1543"
+              ),
+              category: "programming",
+              title: "Bonner Microservices Meetup",
+              subtitle: "#7 Apache Kafka & Event Sourcing",
+              location: "predic8 Penthouse, Koblenzer Str. 65, Bonn",
+              occurrence: Time.parse("2017-02-27 20:00"),
+              color: "e03131"
+            }
+          ]
+        %>
+        <% entries.each do |entry| %>
+          <%= partial "calendar-entry", locals: entry %>
+        <% end %>
+      </calendar-entries>
     </section>
   <% end %>
 </article>
