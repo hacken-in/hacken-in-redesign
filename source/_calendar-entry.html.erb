@@ -1,0 +1,8 @@
+<calendar-entry style="border-left: 5px solid #<%= color %>; background-image: url('https://api.mapbox.com/styles/v1/mapbox/light-v9/static/pin-l+<%= color %>(<%= coordinates.longitude %>,<%= coordinates.latitude %>)/<%= coordinates.longitude %>,<%= coordinates.latitude %>,10/500x300?access_token=pk.eyJ1IjoibW9vbmdsdW0iLCJhIjoiY2l6NXZwNHl2MDA1ZTJ3a2FpMGRmM2FlciJ9.KJIf_maCKBdB3ZDBnEMCQA');">
+  <div class="inner">
+    <time datetime="<%= occurrence %>"><%= occurrence.strftime("%H:%M") %></time>
+    <h4><%= title %></h4>
+    <strong><%= subtitle %></strong>
+    <p><%= location %></p>
+  </div>
+</calendar-entry>

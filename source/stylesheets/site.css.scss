@@ -1,2 +1,69 @@
 body {
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+  font-size: calc(1em + 1vw);
+  background: #fff;
+}
+
+// main {
+//   max-width: 60rem;
+//   margin: 0 auto;
+// }
+
+// p {
+//   line-height: 1.5;
+//   margin: 1.5rem 0;
+//   color: #222;
+// }
+
+// main * + * {
+//   margin-top: 1.5rem;
+// }
+
+// * + h2, * + h3 {
+//   margin-top: 1.5em;
+// }
+
+
+// li, dt, dd, br, th, td {
+//   margin-top: 0;
+// }
+
+calendar-entry {
+  display: block;
+  position: relative;
+  margin-bottom: 2rem;
+  background-position: center center;
+  // background-image and border-left in HTML
+
+  .inner {
+    padding: 1rem 2rem;
+    background-color: rgba(200, 200, 200, 0.8);
+    color: black;
+  }
+
+  h4,
+  strong,
+  time,
+  p {
+    margin: 0;
+    display: block;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  strong,
+  time,
+  p {
+    font-size: 0.8rem;
+  }
 }
